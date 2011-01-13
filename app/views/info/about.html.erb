@@ -4,4 +4,10 @@
 <br/>
 <%= Time.now %> == <%= @time %>
 <br/>
+<% for file in @files %>
+<br/>	file name: <%= file %>, size: <%= File.open(file).stat.size %>
+
+<% end %>
+
+<br/>
 <%= link_to "Probe browser client", info_probe_path %>
