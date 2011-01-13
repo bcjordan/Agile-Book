@@ -1,4 +1,10 @@
 AgileBook::Application.routes.draw do
+  get "info/about"
+
+  get "info/probe"
+
+  get "info/profile"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
