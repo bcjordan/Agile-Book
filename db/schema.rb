@@ -10,6 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20110116195553) do
+
+  create_table "founders", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "about"
+    t.string   "looking_for"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

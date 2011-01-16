@@ -1,4 +1,6 @@
 AgileBook::Application.routes.draw do
+  resources :founders
+
   get "info/about"
 
   get "info/probe"

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Username:</b>
+  <%= @founder.username %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @founder.email %>
+</p>
+
+<p>
+  <b>About:</b>
+  <%= @founder.about %>
+</p>
+
+<p>
+  <b>Looking for:</b>
+  <%= @founder.looking_for %>
+</p>
+
+
+<%= link_to 'Edit', edit_founder_path(@founder) %> |
+<%= link_to 'Back', founders_path %>

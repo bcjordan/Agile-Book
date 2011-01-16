@@ -4,10 +4,13 @@
 <br/>
 <%= Time.now %> == <%= @time %>
 <br/>
+<%= link_to "Probe browser client", info_probe_path %>
+<br/>
 <% for file in @files %>
 <br/>	file name: <%= file %>, size: <%= File.open(file).stat.size %>
-
+	<% if File.open(file).stat.directory? %>
+		<% Dir.glob("#{file}/*").each do |sub_file|%>
+			<br/>&nbsp;&nbsp;&nbsp;&nbsp;<%= sub_file %>
+		<% end %>
+	<% end %>
 <% end %>
-
-<br/>
-<%= link_to "Probe browser client", info_probe_path %>
