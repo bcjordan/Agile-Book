@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+# Seed Founders with test, Brian
+
+Founder.delete_all
+
+Founder.create(:username => 'A Founder', :email => "b.jordan@tufts.edu", 
+               :about => "Novice rails programmer",
+               :looking_for => "Other programmers, designers interested
+               in building something useful and cool.")
