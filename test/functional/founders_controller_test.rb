@@ -2,7 +2,12 @@ require 'test_helper'
 
 class FoundersControllerTest < ActionController::TestCase
   setup do
-    @founder = founders(:one)
+    @founder = founders(:founder_one)
+    @update = {
+      :username => "Test User3",
+      :email => "test@email.com",
+      :about => "About me"
+    }
   end
 
   test "should get index" do
@@ -18,7 +23,7 @@ class FoundersControllerTest < ActionController::TestCase
 
   test "should create founder" do
     assert_difference('Founder.count') do
-      post :create, :founder => @founder.attributes
+      post :create, :founder => @update
     end
 
     assert_redirected_to founder_path(assigns(:founder))
@@ -35,7 +40,7 @@ class FoundersControllerTest < ActionController::TestCase
   end
 
   test "should update founder" do
-    put :update, :id => @founder.to_param, :founder => @founder.attributes
+    put :update, :id => @founder.to_param, :founder => @update
     assert_redirected_to founder_path(assigns(:founder))
   end
 
